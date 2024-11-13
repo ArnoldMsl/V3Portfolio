@@ -1,14 +1,13 @@
 import React, { useEffect } from 'react';
 
-function scrollTrigger(selector, options) {
-    let elements = document.querySelectorAll(selector);
-    elements = Array.from(elements);
+function scrollTrigger(selector: string, options: { rootMargin?: string, cb?: (el: Element) => void }) {
+    const elements: NodeListOf<Element> = document.querySelectorAll(selector);
     elements.forEach(element => {
         addObserver(element, options);
     });
 }
 
-function addObserver(element, options) {
+function addObserver(element:Element, options: { rootMargin?: string, cb?: (el: Element) => void }) {
     if (!('IntersectionObserver' in window)) {
         if (options.cb) {
             options.cb(element);
