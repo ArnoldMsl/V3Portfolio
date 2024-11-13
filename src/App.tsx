@@ -1,6 +1,4 @@
-import React from 'react'
 import Uikit from './pages/Uikit'
-
 
 function App() {
 
