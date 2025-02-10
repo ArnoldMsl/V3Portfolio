@@ -1,10 +1,10 @@
-import Uikit from './pages/Uikit'
+import Appli from './pages/Appli'
 
 function App() {
 
   return (
     <>
-      <Uikit />
+      <Appli />
     </>
   )
 }

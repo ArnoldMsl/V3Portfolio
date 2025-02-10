@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+import Navbar from '../components/Navbar';
 
 function scrollTrigger(selector: string, options: { rootMargin?: string, cb?: (el: Element) => void }) {
     const elements: NodeListOf<Element> = document.querySelectorAll(selector);
@@ -7,7 +8,7 @@ function scrollTrigger(selector: string, options: { rootMargin?: string, cb?: (e
     });
 }
 
-function addObserver(element:Element, options: { rootMargin?: string, cb?: (el: Element) => void }) {
+function addObserver(element: Element, options: { rootMargin?: string, cb?: (el: Element) => void }) {
     if (!('IntersectionObserver' in window)) {
         if (options.cb) {
             options.cb(element);
@@ -44,7 +45,7 @@ function Uikit() {
 
     return (
         <>
-            <h1 className={'customH1 scroll-reveal pop'}>ARNOLD MASSELIN</h1>
+        <Navbar />
             <h1 className={'customH1 scroll-reveal animatedX left'}>H1 : Montserrat, bold, 80</h1>
             <h2 className={'customH2 scroll-reveal animatedX right'}>H2 : Montserrat, bold, 50</h2>
             <h3 className={'customH3 scroll-reveal animatedX right'}>H3 : Montserrat, Semibold, 40</h3>
@@ -57,6 +58,11 @@ function Uikit() {
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </p>
             <button className={'customButton'}>Button</button>
+            <div className={'relative'}>
+                <img className={'absolute z-[-4] scroll-reveal animatedY animBottom'} src="src\assets\images\background\herobackground3.png"></img>
+                <img className={'absolute z-[-3] scroll-reveal animatedY speedMedium animBottom'} src="src\assets\images\background\herobackground2.png"></img>
+                <img className={'absolute z-[-1] scroll-reveal animatedY speedSlow animBottom'} src="src\assets\images\background\herobackground1.png"></img>
+            </div>
         </>
     );
 }
