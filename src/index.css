@@ -38,6 +38,7 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: var(--bg-color);
   overflow-x: hidden;
+  max-width: 1920px;
   
   --bg-color: #0C2D57;
   --bg-color-dim: #0c2c5786;
@@ -256,15 +257,15 @@ p {
 @media (min-width: 1280px) {
 
   .customH1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
   
   .customH2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   
   .customH3 {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   
   .customH4 {
